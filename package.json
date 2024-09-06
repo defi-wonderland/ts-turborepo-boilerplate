@@ -1,0 +1,36 @@
+{
+  "name": "ts-turborepo-boilerplate",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Wonderland",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": "20"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "format": "turbo run format",
+    "format:fix": "turbo run format:fix",
+    "check-types": "turbo run check-types",
+    "test": "turbo run test",
+    "test:cov": "turbo run test:cov",
+    "test:integration": "turbo run test:integration",
+    "prepare": "husky",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "packageManager": "pnpm@9.7.1+sha256.46f1bbc8f8020aa9869568c387198f1a813f21fb44c82f400e7d1dbde6c70b40",
+  "devDependencies": {
+    "@commitlint/config-conventional": "19.4.1",
+    "@types/node": "22.5.4",
+    "commitlint": "19.4.1",
+    "husky": "9.1.5",
+    "turbo": "2.1.1",
+    "typescript": "5.5.4"
+  }
+}
