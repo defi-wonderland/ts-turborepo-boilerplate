@@ -5,7 +5,7 @@ on:
 
 jobs:
     unit:
-        name: Run unit tests
+        name: Integration tests
         runs-on: ubuntu-latest
         steps:
             - name: Check out github repository
@@ -16,5 +16,5 @@ jobs:
             - name: Setup environment and install dependencies
               uses: ./.github/actions/setup
 
-            - name: Run intergration tests
+            - name: Run integration tests
               run: pnpm test:integration
