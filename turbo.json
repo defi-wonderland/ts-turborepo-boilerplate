@@ -1,0 +1,29 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "tasks": {
+        "lint": {},
+        "lint:fix": {},
+        "format": {},
+        "format:fix": {},
+        "check-types": {},
+        "test": {
+            "dependsOn": ["build"]
+        },
+        "test:cov": {
+            "dependsOn": ["build"]
+        },
+        "test:integration": {
+            "dependsOn": ["build"]
+        },
+        "build": {
+            "dependsOn": ["^build"]
+        },
+        "dev": {
+            "cache": false
+        },
+        "start": {
+            "dependsOn": ["build"]
+        }
+    },
+    "globalDependencies": [".eslintrc", ".prettierrc"]
+}
