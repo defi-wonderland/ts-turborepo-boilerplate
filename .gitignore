@@ -44,3 +44,9 @@ contracts/cache
 
 # Temporary files
 .tmp
+
+# IDEA
+.idea 
+
+# vscode
+.vscode
