@@ -23,6 +23,7 @@ node_modules
 out/
 build
 dist
+cache
 
 # Debug
 npm-debug.log*
@@ -50,3 +51,6 @@ contracts/cache
 
 # vscode
 .vscode
+
+# Coverage
+lcov.info

@@ -1,0 +1,28 @@
+{
+    "name": "@ts-turborepo-boilerplate/contracts",
+    "version": "0.0.1",
+    "private": true,
+    "description": "",
+    "license": "MIT",
+    "author": "Wonderland",
+    "type": "module",
+    "scripts": {
+        "build": "forge build",
+        "lint": "pnpm lint:sol-tests && pnpm lint:sol-logic && forge fmt --check",
+        "lint:fix": "forge fmt && pnpm lint:sol-tests --fix && pnpm lint:sol-logic --fix",
+        "lint:sol-logic": "solhint -c .solhint.json 'src/**/*.sol' 'script/**/*.sol'",
+        "lint:sol-tests": "solhint -c .solhint.tests.json 'test/**/*.sol'",
+        "test": "forge test -vvv",
+        "test:coverage": "forge coverage --report summary --report lcov --match-path 'test/unit/*'"
+    },
+    "lint-staged": {
+        "(src|test)*.{js,css,md,ts,sol}": "forge fmt",
+        "src/**/*.sol": "pnpm lint:sol-logic",
+        "test/**/*.sol": "pnpm lint:sol-tests",
+        "package.json": "sort-package-json"
+    },
+    "devDependencies": {
+        "forge-std": "github:foundry-rs/forge-std#semver:1.9.2",
+        "solhint-community": "4.0.0"
+    }
+}
