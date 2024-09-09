@@ -2,15 +2,40 @@
 
 ## Features
 
+### Lint and format
+
+Use ESLint and Prettier to easily find issues as you code
+
 ### Github workflows CI
+
 Lint code and check commit messages format on every push.
 
 Run all tests and see the coverage before merging changes.
 
-
 ## Tech stack
-- [pnpm](https://pnpm.io/): package and workspace manager
-- [turborepo](https://turbo.build/repo/docs): for managing the monorepo and the build system
+
+-   [pnpm](https://pnpm.io/): package and workspace manager
+-   [turborepo](https://turbo.build/repo/docs): for managing the monorepo and the build system
+
+### Configuring Prettier sort import plugin
+
+You can further add sorting rules for your monorepo, for example in `.prettierrc` you can add:
+
+```json
+    ...
+    "importOrder": [
+        "<TYPES>",
+        ...
+        "",
+        "<TYPES>^@myproject", //added
+        "^@myproject/(.*)$", //added
+        "",
+        ...
+    ],
+    ...
+```
+
+We use [IanVs prettier-plugin-sort-imports](https://github.com/IanVS/prettier-plugin-sort-imports)
 
 ## Contributing
 

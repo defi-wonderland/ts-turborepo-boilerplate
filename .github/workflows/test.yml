@@ -15,7 +15,7 @@ jobs:
 
             - name: Setup environment
               uses: ./.github/actions/setup
-                
+
             - name: Install dependencies
               run: pnpm install --frozen-lockfile
 
