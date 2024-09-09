@@ -1,5 +1,13 @@
 # ts-turborepo-boilerplate
 
+## Features
+
+### Github workflows CI
+Lint code and check commit messages format on every push.
+
+Run all tests and see the coverage before merging changes.
+
+
 ## Tech stack
 - [pnpm](https://pnpm.io/): package and workspace manager
 - [turborepo](https://turbo.build/repo/docs): for managing the monorepo and the build system
