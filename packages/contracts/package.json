@@ -13,7 +13,7 @@
         "lint:sol-logic": "solhint -c .solhint.json 'src/**/*.sol' 'script/**/*.sol'",
         "lint:sol-tests": "solhint -c .solhint.tests.json 'test/**/*.sol'",
         "test": "forge test -vvv",
-        "test:coverage": "forge coverage --report summary --report lcov --match-path 'test/unit/*'"
+        "test:cov": "forge coverage --report summary --report lcov --match-path 'test/unit/*'"
     },
     "lint-staged": {
         "(src|test)*.{js,css,md,ts,sol}": "forge fmt",
