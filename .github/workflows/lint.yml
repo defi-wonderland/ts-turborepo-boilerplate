@@ -22,8 +22,11 @@ jobs:
         steps:
             - uses: actions/checkout@v4
 
-            - name: Setup environment and install dependencies
+            - name: Setup environment
               uses: ./.github/actions/setup
+                
+            - name: Install dependencies
+              run: pnpm install --frozen-lockfile
 
             - name: Run Prettier
               run: pnpm format
