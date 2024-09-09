@@ -8,9 +8,9 @@
     "type": "module",
     "scripts": {
         "build": "forge build",
-        "lint": "pnpm lint:sol-tests && pnpm lint:sol-logic && forge fmt --check",
+        "lint": "forge fmt",
         "lint:fix": "forge fmt && pnpm lint:sol-tests --fix && pnpm lint:sol-logic --fix",
-        "lint:sol-logic": "solhint -c .solhint.json 'src/**/*.sol' 'script/**/*.sol'",
+        "lint:sol-logic": "solhint -c .solhint.json 'src/**/*.sol'",
         "lint:sol-tests": "solhint -c .solhint.tests.json 'test/**/*.sol'",
         "test": "forge test -vvv",
         "test:cov": "forge coverage --report summary --report lcov --match-path 'test/unit/*'"

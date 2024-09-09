@@ -17,3 +17,5 @@ runs:
 
         - name: Use foundry
           uses: foundry-rs/foundry-toolchain@v1
+          with:
+              version: nightly
