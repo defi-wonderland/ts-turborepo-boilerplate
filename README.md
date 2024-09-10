@@ -2,6 +2,12 @@
 
 ## Features
 
+### Sample contracts with Foundry
+
+Basic Greeter contract with an external interface
+
+Foundry configuration out-of-the-box
+
 ### Lint and format
 
 Use ESLint and Prettier to easily find issues as you code
@@ -16,6 +22,7 @@ Run all tests and see the coverage before merging changes.
 
 -   [pnpm](https://pnpm.io/): package and workspace manager
 -   [turborepo](https://turbo.build/repo/docs): for managing the monorepo and the build system
+-   [foundry](https://book.getfoundry.sh/forge/): for writing Solidity smart contracts
 
 ### Configuring Prettier sort import plugin
 
