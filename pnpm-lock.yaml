@@ -56,11 +56,23 @@ importers:
                 specifier: 2.0.5
                 version: 2.0.5(@types/node@22.5.4)
 
+    apps/sample-app:
+        dependencies:
+            "@ts-turborepo-boilerplate/sample-lib":
+                specifier: workspace:*
+                version: link:../../packages/sample-lib
+            dotenv:
+                specifier: 16.4.5
+                version: 16.4.5
+            zod:
+                specifier: 3.23.8
+                version: 3.23.8
+
     packages/sample-lib:
         dependencies:
             viem:
                 specifier: 2.21.4
-                version: 2.21.4(typescript@5.5.4)
+                version: 2.21.4(typescript@5.5.4)(zod@3.23.8)
 
 packages:
     "@adraffy/ens-normalize@1.10.0":
@@ -1366,6 +1378,13 @@ packages:
                 integrity: sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==,
             }
         engines: { node: ">=8" }
+
+    dotenv@16.4.5:
+        resolution:
+            {
+                integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==,
+            }
+        engines: { node: ">=12" }
 
     electron-to-chromium@1.5.17:
         resolution:
@@ -3034,6 +3053,12 @@ packages:
             }
         engines: { node: ">=12.20" }
 
+    zod@3.23.8:
+        resolution:
+            {
+                integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==,
+            }
+
 snapshots:
     "@adraffy/ens-normalize@1.10.0": {}
 
@@ -3612,9 +3637,10 @@ snapshots:
             jsonparse: 1.3.1
             through: 2.3.8
 
-    abitype@1.0.5(typescript@5.5.4):
+    abitype@1.0.5(typescript@5.5.4)(zod@3.23.8):
         optionalDependencies:
             typescript: 5.5.4
+            zod: 3.23.8
 
     acorn-jsx@5.3.2(acorn@8.12.1):
         dependencies:
@@ -3823,6 +3849,8 @@ snapshots:
     dot-prop@5.3.0:
         dependencies:
             is-obj: 2.0.0
+
+    dotenv@16.4.5: {}
 
     electron-to-chromium@1.5.17: {}
 
@@ -4595,14 +4623,14 @@ snapshots:
         dependencies:
             punycode: 2.3.1
 
-    viem@2.21.4(typescript@5.5.4):
+    viem@2.21.4(typescript@5.5.4)(zod@3.23.8):
         dependencies:
             "@adraffy/ens-normalize": 1.10.0
             "@noble/curves": 1.4.0
             "@noble/hashes": 1.4.0
             "@scure/bip32": 1.4.0
             "@scure/bip39": 1.4.0
-            abitype: 1.0.5(typescript@5.5.4)
+            abitype: 1.0.5(typescript@5.5.4)(zod@3.23.8)
             isows: 1.0.4(ws@8.17.1)
             webauthn-p256: 0.0.5
             ws: 8.17.1
@@ -4726,3 +4754,5 @@ snapshots:
     yocto-queue@0.1.0: {}
 
     yocto-queue@1.1.1: {}
+
+    zod@3.23.8: {}
