@@ -1,4 +1,4 @@
-import { Address } from "viem";
+import { Address } from "../internal.js";
 
 /**
  * Represents an interface for a blockchain provider.

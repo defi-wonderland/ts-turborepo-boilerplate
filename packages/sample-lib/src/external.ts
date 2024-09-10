@@ -1,5 +1,4 @@
-export type { IBlockchainProvider } from "./internal.js";
-export type { Address } from "viem";
+export type { IBlockchainProvider, Address } from "./internal.js";
 
 export { InvalidRpcUrl } from "./internal.js";
 
