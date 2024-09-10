@@ -2,11 +2,28 @@
 
 ## Features
 
+### Boilerplate monorepo setup
+
+Quickly start developing your offchain monorepo project with
+minimal configuration overhead using Turborepo
+
+### Sample library with Viem
+
+Simple provider that uses Viem client to query account balances
+
 ### Sample contracts with Foundry
 
 Basic Greeter contract with an external interface
 
 Foundry configuration out-of-the-box
+
+### Sample app that consumes the library
+
+How much ETH do Vitalik and the Zero address hold together?
+
+### Testing
+
+Unit test setup with Vitest framework
 
 ### Lint and format
 
@@ -18,11 +35,29 @@ Lint code and check commit messages format on every push.
 
 Run all tests and see the coverage before merging changes.
 
+## Overview
+
+This repository is a monorepo consisting of 2 packages and 1 app:
+
+-   [`@ts-turborepo-boilerplate/contracts`](./packages/contracts): A library for writing all required smart contracts
+-   [`@ts-turborepo-boilerplate/sample-lib`](./packages/sample-lib): A sample library for querying account balances
+-   [`@ts-turborepo-boilerplate/sample-app`](./apps/sample-app): A demo sample app that uses the sample-lib
+
+## 📋 Prerequisites
+
+-   Ensure you have `node 20` and `pnpm 9.7.1` installed.
+
 ## Tech stack
 
 -   [pnpm](https://pnpm.io/): package and workspace manager
 -   [turborepo](https://turbo.build/repo/docs): for managing the monorepo and the build system
 -   [foundry](https://book.getfoundry.sh/forge/): for writing Solidity smart contracts
+-   [husky](https://typicode.github.io/husky/): tool for managing git hooks
+-   tsc: for transpiling TS and building source code
+-   [prettier](https://prettier.io/): code formatter
+-   [eslint](https://typescript-eslint.io/): code linter
+-   [vitest](https://vitest.dev/): modern testing framework
+-   [Viem](https://viem.sh/): lightweight library to interface with EVM based blockchains
 
 ### Configuring Prettier sort import plugin
 
