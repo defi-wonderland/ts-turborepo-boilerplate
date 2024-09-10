@@ -68,6 +68,15 @@ importers:
                 specifier: 3.23.8
                 version: 3.23.8
 
+    packages/contracts:
+        devDependencies:
+            forge-std:
+                specifier: github:foundry-rs/forge-std#semver:1.9.2
+                version: https://codeload.github.com/foundry-rs/forge-std/tar.gz/1714bee72e286e73f76e320d110e0eaf5c4e649d
+            solhint-community:
+                specifier: 4.0.0
+                version: 4.0.0(typescript@5.5.4)
+
     packages/sample-lib:
         dependencies:
             viem:
@@ -828,6 +837,12 @@ packages:
                 integrity: sha512-BEEm6p8IueV/ZTfQLp/0vhw4NPnT9oWf5+28nvmeUICjP99f4vr2d+qc7AVGDDtwRep6ifR43Yed9ERVmiITzw==,
             }
 
+    "@solidity-parser/parser@0.16.2":
+        resolution:
+            {
+                integrity: sha512-PI9NfoA3P8XK2VBkK5oIfRgKDsicwDZfkVq9ZTBCQYGOP1N2owgY2dyLGyU5/J/hQs8KRk55kdmvTLjy3Mu3vg==,
+            }
+
     "@types/conventional-commits-parser@5.0.0":
         resolution:
             {
@@ -1061,6 +1076,19 @@ packages:
             }
         engines: { node: ">=12" }
 
+    antlr4@4.13.2:
+        resolution:
+            {
+                integrity: sha512-QiVbZhyy4xAZ17UPEuG3YTOt8ZaoeOR1CvEAqrEsDBsOqINslaB147i9xqljZqoyf5S+EUlGStaj+t22LT9MOg==,
+            }
+        engines: { node: ">=16" }
+
+    antlr4ts@0.5.0-alpha.4:
+        resolution:
+            {
+                integrity: sha512-WPQDt1B74OfPv/IMS2ekXAKkTZIHl88uMetg6q3OTqgFxZ/dxDXI0EWLyZid/1Pe6hTftyg5N7gel5wNAGxXyQ==,
+            }
+
     argparse@2.0.1:
         resolution:
             {
@@ -1086,6 +1114,19 @@ packages:
                 integrity: sha512-Izi8RQcffqCeNVgFigKli1ssklIbpHnCYc6AknXGYoB6grJqyeby7jv12JUQgmTAnIDnbck1uxksT4dzN3PWBA==,
             }
         engines: { node: ">=12" }
+
+    ast-parents@0.0.1:
+        resolution:
+            {
+                integrity: sha512-XHusKxKz3zoYk1ic8Un640joHbFMhbqneyoZfoKnEGtf2ey9Uh/IdpcQplODdO/kENaMIWsD0nJm4+wX3UNLHA==,
+            }
+
+    astral-regex@2.0.0:
+        resolution:
+            {
+                integrity: sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==,
+            }
+        engines: { node: ">=8" }
 
     balanced-match@1.0.2:
         resolution:
@@ -1227,6 +1268,13 @@ packages:
                 integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==,
             }
 
+    commander@11.1.0:
+        resolution:
+            {
+                integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==,
+            }
+        engines: { node: ">=16" }
+
     commander@12.1.0:
         resolution:
             {
@@ -1292,6 +1340,18 @@ packages:
             "@types/node": "*"
             cosmiconfig: ">=8.2"
             typescript: ">=4"
+
+    cosmiconfig@8.3.6:
+        resolution:
+            {
+                integrity: sha512-kcZ6+W5QzcJ3P1Mt+83OUv/oHFqZHIx8DuxG6eZ5RGMERoLqp4BuGjhHLYGK+Kf5XVkQvqBSmAy/nGWN3qDgEA==,
+            }
+        engines: { node: ">=14" }
+        peerDependencies:
+            typescript: ">=4.9.5"
+        peerDependenciesMeta:
+            typescript:
+                optional: true
 
     cosmiconfig@9.0.0:
         resolution:
@@ -1639,6 +1699,13 @@ packages:
                 integrity: sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw==,
             }
 
+    forge-std@https://codeload.github.com/foundry-rs/forge-std/tar.gz/1714bee72e286e73f76e320d110e0eaf5c4e649d:
+        resolution:
+            {
+                tarball: https://codeload.github.com/foundry-rs/forge-std/tar.gz/1714bee72e286e73f76e320d110e0eaf5c4e649d,
+            }
+        version: 1.9.2
+
     fs.realpath@1.0.0:
         resolution:
             {
@@ -1727,6 +1794,14 @@ packages:
             {
                 integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==,
             }
+        deprecated: Glob versions prior to v9 are no longer supported
+
+    glob@8.1.0:
+        resolution:
+            {
+                integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==,
+            }
+        engines: { node: ">=12" }
         deprecated: Glob versions prior to v9 are no longer supported
 
     global-directory@4.0.1:
@@ -2113,6 +2188,12 @@ packages:
                 integrity: sha512-+WKqsK294HMSc2jEbNgpHpd0JfIBhp7rEV4aqXWqFr6AlXov+SlcgB1Fv01y2kGe3Gc8nMW7VA0SrGuSkRfIEg==,
             }
 
+    lodash.truncate@4.4.2:
+        resolution:
+            {
+                integrity: sha512-jttmRe7bRse52OsWIMDLaXxWqRAmtIUccAQ3garviCqJjafXOfNMO0yMfNpdD6zbGaTU0P5Nz7e7gAT6cKmJRw==,
+            }
+
     lodash.uniq@4.5.0:
         resolution:
             {
@@ -2123,6 +2204,12 @@ packages:
         resolution:
             {
                 integrity: sha512-sReKOYJIJf74dhJONhU4e0/shzi1trVbSWDOhKYE5XV2O+H7Sb2Dihwuc7xWxVl+DgFPyTqIN3zMfT9cq5iWDg==,
+            }
+
+    lodash@4.17.21:
+        resolution:
+            {
+                integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==,
             }
 
     log-update@6.1.0:
@@ -2196,6 +2283,13 @@ packages:
             {
                 integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==,
             }
+
+    minimatch@5.1.6:
+        resolution:
+            {
+                integrity: sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==,
+            }
+        engines: { node: ">=10" }
 
     minimatch@9.0.5:
         resolution:
@@ -2388,6 +2482,13 @@ packages:
         engines: { node: ">=0.10" }
         hasBin: true
 
+    pluralize@8.0.0:
+        resolution:
+            {
+                integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==,
+            }
+        engines: { node: ">=4" }
+
     postcss@8.4.45:
         resolution:
             {
@@ -2408,6 +2509,14 @@ packages:
                 integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==,
             }
         engines: { node: ">=6.0.0" }
+
+    prettier@2.8.8:
+        resolution:
+            {
+                integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==,
+            }
+        engines: { node: ">=10.13.0" }
+        hasBin: true
 
     prettier@3.3.3:
         resolution:
@@ -2556,6 +2665,13 @@ packages:
             }
         engines: { node: ">=12" }
 
+    slice-ansi@4.0.0:
+        resolution:
+            {
+                integrity: sha512-qMCMfhY040cVHT43K9BFygqYbUPFZKHOg7K73mtTWJRb8pyP3fzf4Ixd5SzdEJQ6MRUg/WBnOLxghZtKKurENQ==,
+            }
+        engines: { node: ">=10" }
+
     slice-ansi@5.0.0:
         resolution:
             {
@@ -2569,6 +2685,13 @@ packages:
                 integrity: sha512-bSiSngZ/jWeX93BqeIAbImyTbEihizcwNjFoRUIY/T1wWQsfsm2Vw1agPKylXvQTU7iASGdHhyqRlqQzfz+Htg==,
             }
         engines: { node: ">=18" }
+
+    solhint-community@4.0.0:
+        resolution:
+            {
+                integrity: sha512-BERw3qYzkJE64EwvYrp2+iiTN8yAZOJ74FCiL4bTBp7v0JFUvRYCEGZKAqfHcfi/koKkzM6qThsJUceKm9vvfg==,
+            }
+        hasBin: true
 
     sort-object-keys@1.1.3:
         resolution:
@@ -2678,6 +2801,13 @@ packages:
                 integrity: sha512-7gr8p9TQP6RAHusBOSLs46F4564ZrjV8xFmw5zCmgmhGUcw2hxsShhJ6CEiHQMgPDwAQ1fWHPM0ypc4RMAig4A==,
             }
         engines: { node: ^14.18.0 || >=16.0.0 }
+
+    table@6.8.2:
+        resolution:
+            {
+                integrity: sha512-w2sfv80nrAh2VCbqR5AK27wswXhqcck2AhfnNW76beQXskGZ1V12GwS//yYVa3d3fcvAip2OUnbDAjW2k3v9fA==,
+            }
+        engines: { node: ">=10.0.0" }
 
     text-extensions@2.4.0:
         resolution:
@@ -3506,6 +3636,10 @@ snapshots:
             "@noble/hashes": 1.5.0
             "@scure/base": 1.1.8
 
+    "@solidity-parser/parser@0.16.2":
+        dependencies:
+            antlr4ts: 0.5.0-alpha.4
+
     "@types/conventional-commits-parser@5.0.0":
         dependencies:
             "@types/node": 22.5.4
@@ -3680,6 +3814,10 @@ snapshots:
 
     ansi-styles@6.2.1: {}
 
+    antlr4@4.13.2: {}
+
+    antlr4ts@0.5.0-alpha.4: {}
+
     argparse@2.0.1: {}
 
     array-ify@1.0.0: {}
@@ -3687,6 +3825,10 @@ snapshots:
     array-union@2.1.0: {}
 
     assertion-error@2.0.1: {}
+
+    ast-parents@0.0.1: {}
+
+    astral-regex@2.0.0: {}
 
     balanced-match@1.0.2: {}
 
@@ -3768,6 +3910,8 @@ snapshots:
 
     colorette@2.0.20: {}
 
+    commander@11.1.0: {}
+
     commander@12.1.0: {}
 
     commitlint@19.4.1(@types/node@22.5.4)(typescript@5.5.4):
@@ -3807,6 +3951,15 @@ snapshots:
             "@types/node": 22.5.4
             cosmiconfig: 9.0.0(typescript@5.5.4)
             jiti: 1.21.6
+            typescript: 5.5.4
+
+    cosmiconfig@8.3.6(typescript@5.5.4):
+        dependencies:
+            import-fresh: 3.3.0
+            js-yaml: 4.1.0
+            parse-json: 5.2.0
+            path-type: 4.0.0
+        optionalDependencies:
             typescript: 5.5.4
 
     cosmiconfig@9.0.0(typescript@5.5.4):
@@ -4046,6 +4199,9 @@ snapshots:
 
     flatted@3.3.1: {}
 
+    forge-std@https://codeload.github.com/foundry-rs/forge-std/tar.gz/1714bee72e286e73f76e320d110e0eaf5c4e649d:
+        {}
+
     fs.realpath@1.0.0: {}
 
     fsevents@2.3.3:
@@ -4087,6 +4243,14 @@ snapshots:
             minimatch: 3.1.2
             once: 1.4.0
             path-is-absolute: 1.0.1
+
+    glob@8.1.0:
+        dependencies:
+            fs.realpath: 1.0.0
+            inflight: 1.0.6
+            inherits: 2.0.4
+            minimatch: 5.1.6
+            once: 1.4.0
 
     global-directory@4.0.1:
         dependencies:
@@ -4264,9 +4428,13 @@ snapshots:
 
     lodash.startcase@4.4.0: {}
 
+    lodash.truncate@4.4.2: {}
+
     lodash.uniq@4.5.0: {}
 
     lodash.upperfirst@4.3.1: {}
+
+    lodash@4.17.21: {}
 
     log-update@6.1.0:
         dependencies:
@@ -4306,6 +4474,10 @@ snapshots:
     minimatch@3.1.2:
         dependencies:
             brace-expansion: 1.1.11
+
+    minimatch@5.1.6:
+        dependencies:
+            brace-expansion: 2.0.1
 
     minimatch@9.0.5:
         dependencies:
@@ -4395,6 +4567,8 @@ snapshots:
 
     pidtree@0.6.0: {}
 
+    pluralize@8.0.0: {}
+
     postcss@8.4.45:
         dependencies:
             nanoid: 3.3.7
@@ -4406,6 +4580,9 @@ snapshots:
     prettier-linter-helpers@1.0.0:
         dependencies:
             fast-diff: 1.3.0
+
+    prettier@2.8.8:
+        optional: true
 
     prettier@3.3.3: {}
 
@@ -4478,6 +4655,12 @@ snapshots:
 
     slash@4.0.0: {}
 
+    slice-ansi@4.0.0:
+        dependencies:
+            ansi-styles: 4.3.0
+            astral-regex: 2.0.0
+            is-fullwidth-code-point: 3.0.0
+
     slice-ansi@5.0.0:
         dependencies:
             ansi-styles: 6.2.1
@@ -4487,6 +4670,30 @@ snapshots:
         dependencies:
             ansi-styles: 6.2.1
             is-fullwidth-code-point: 5.0.0
+
+    solhint-community@4.0.0(typescript@5.5.4):
+        dependencies:
+            "@solidity-parser/parser": 0.16.2
+            ajv: 6.12.6
+            antlr4: 4.13.2
+            ast-parents: 0.0.1
+            chalk: 4.1.2
+            commander: 11.1.0
+            cosmiconfig: 8.3.6(typescript@5.5.4)
+            fast-diff: 1.3.0
+            glob: 8.1.0
+            ignore: 5.3.2
+            js-yaml: 4.1.0
+            lodash: 4.17.21
+            pluralize: 8.0.0
+            semver: 6.3.1
+            strip-ansi: 6.0.1
+            table: 6.8.2
+            text-table: 0.2.0
+        optionalDependencies:
+            prettier: 2.8.8
+        transitivePeerDependencies:
+            - typescript
 
     sort-object-keys@1.1.3: {}
 
@@ -4547,6 +4754,14 @@ snapshots:
         dependencies:
             "@pkgr/core": 0.1.1
             tslib: 2.7.0
+
+    table@6.8.2:
+        dependencies:
+            ajv: 8.17.1
+            lodash.truncate: 4.4.2
+            slice-ansi: 4.0.0
+            string-width: 4.2.3
+            strip-ansi: 6.0.1
 
     text-extensions@2.4.0: {}
 
