@@ -1,8 +1,12 @@
 {
     "$schema": "https://turbo.build/schema.json",
     "tasks": {
-        "lint": {},
-        "lint:fix": {},
+        "lint": {
+            "dependsOn": ["build"]
+        },
+        "lint:fix": {
+            "dependsOn": ["build"]
+        },
         "format": {},
         "format:fix": {},
         "check-types": {},

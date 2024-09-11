@@ -8,7 +8,7 @@ using Foundry in seconds. It contains a basic Greeter contract with
 an external interface
 
 ## Setup
-1. Change package name to follow yours project one in [`package.json`](./package.json)
+1. Change package name to your own in [`package.json`](./package.json)
 2. Install dependencies running `pnpm install`
 
 ## Available Scripts
