@@ -9,7 +9,7 @@ provider to fetch Vitalik and Zero address native balance and sums them
 
 ## Setup
 
-1. Change package name to follow yours project one in [`package.json`](./package.json)
+1. Change package name to your own in [`package.json`](./package.json)
 2. Install dependencies running `pnpm install`
 
 ### ⚙️ Setting up env variables

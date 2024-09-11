@@ -9,7 +9,7 @@ account balances on Ethereum mainnet or EVM-compatible blockchains
 
 ## Setup
 
-1. Change package name to follow yours project one in [`package.json`](./package.json)
+1. Change package name to your own in [`package.json`](./package.json)
 2. Install dependencies running `pnpm install`
 
 ## Available Scripts
