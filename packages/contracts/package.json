@@ -8,6 +8,7 @@
     "type": "module",
     "scripts": {
         "build": "forge build",
+        "clean": "rm -rf out && rm -rf cache",
         "lint": "forge fmt",
         "lint:fix": "forge fmt && pnpm lint:sol-tests --fix && pnpm lint:sol-logic --fix",
         "lint:sol-logic": "solhint -c .solhint.json 'src/**/*.sol'",
