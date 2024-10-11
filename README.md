@@ -79,6 +79,22 @@ You can further add sorting rules for your monorepo, for example in `.prettierrc
 
 We use [IanVs prettier-plugin-sort-imports](https://github.com/IanVS/prettier-plugin-sort-imports)
 
+## Available Scripts
+
+### `create-package`
+
+The `create-package` script allows you to create a new package within the `packages` directory. It automates the setup of a new package with the necessary directory structure and initial files scaffolded.
+
+#### Usage
+
+To create a new package, run the following command:
+
+```bash
+pnpm run create-package <package-name>
+```
+
+Replace `<package-name>` with your desired package name. This command will generate the package directory with predefined templates and configuration files.
+
 ## Contributing
 
 Wonderland is a team of top Web3 researchers, developers, and operators who believe that the future needs to be open-source, permissionless, and decentralized.
