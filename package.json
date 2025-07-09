@@ -17,6 +17,7 @@
         "clean": "turbo run clean",
         "create-package": "./create-package.sh",
         "dev": "turbo run dev",
+        "env:prebuild": "turbo run env:prebuild",
         "format": "turbo run format",
         "format:fix": "turbo run format:fix",
         "preinstall": "npx only-allow pnpm",

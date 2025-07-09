@@ -32,6 +32,9 @@
         },
         "start": {
             "dependsOn": ["build"]
+        },
+        "env:prebuild": {
+            "cache": false
         }
     },
     "globalDependencies": [".eslintrc.cjs", ".prettierrc", "**/.env", "tsconfig.json"]
