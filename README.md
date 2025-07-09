@@ -29,6 +29,42 @@ Unit test setup with Vitest framework
 
 Use ESLint and Prettier to easily find issues as you code
 
+### Secret Lint
+
+Use Secretlint to avoid pushing secrets and credentials.
+By default, it uses `@secretlint/secretlint-rule-preset-recommend`, which searches for typical AWS, GCP, and other credentials in staged files before a commit.
+
+You can add custom regex patterns and allow specific values by editing `.secretlintrc.json`:
+
+```json
+{
+    "rules": [
+        {
+            "id": "@secretlint/secretlint-rule-preset-recommend",
+            "rules": [
+                {
+                    "id": "@secretlint/secretlint-rule-npm",
+                    "options": {
+                        "allows": ["TOKEN"]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "@secretlint/secretlint-rule-pattern",
+            "options": {
+                "patterns": [
+                    {
+                        "name": "password",
+                        "pattern": "/password\\s*=\\s*(?<password>[\\w\\d!@#$%^&(){}\\[\\]:\";'<>,.?/~`_+-=|]{1,256})\\b.*/"
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
+
 ### Github workflows CI
 
 Lint code and check commit messages format on every push.
