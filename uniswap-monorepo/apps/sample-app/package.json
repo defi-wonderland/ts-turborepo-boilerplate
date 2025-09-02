@@ -1,0 +1,27 @@
+{
+    "name": "@ts-turborepo-boilerplate/sample-app",
+    "version": "0.0.1",
+    "type": "module",
+    "main": "./dist/index.js",
+    "scripts": {
+        "build": "tsc -p tsconfig.build.json",
+        "check-types": "tsc --noEmit -p ./tsconfig.json",
+        "clean": "rm -rf dist",
+        "env:decrypt": "npx @dotenvx/dotenvx decrypt",
+        "env:encrypt": "npx @dotenvx/dotenvx encrypt",
+        "env:get": "npx @dotenvx/dotenvx get",
+        "env:prebuild": "npx @dotenvx/dotenvx ext prebuild",
+        "env:set": "npx @dotenvx/dotenvx set",
+        "format": "prettier --check \"{src,test}/**/*.{js,ts,json}\"",
+        "format:fix": "prettier --write \"{src,test}/**/*.{js,ts,json}\"",
+        "lint": "eslint \"{src,test}/**/*.{js,ts,json}\"",
+        "lint:fix": "pnpm lint --fix",
+        "start": "npx @dotenvx/dotenvx run -- node dist/index.js",
+        "test": "vitest run --config vitest.config.ts --passWithNoTests",
+        "test:cov": "vitest run --config vitest.config.ts --coverage"
+    },
+    "dependencies": {
+        "@ts-turborepo-boilerplate/sample-lib": "workspace:*",
+        "zod": "3.23.8"
+    }
+}

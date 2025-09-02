@@ -19,12 +19,9 @@
         "test:cov": {
             "dependsOn": ["build"]
         },
-        "test:integration": {
-            "dependsOn": ["build"]
-        },
         "build": {
             "dependsOn": ["^build"],
-            "outputs": ["dist/**", "out/**"],
+            "outputs": ["dist/**", "artifacts/**", "out/**"],
             "inputs": ["$TURBO_DEFAULT$", "src/**/*.ts", "src/**/*.json"]
         },
         "dev": {
@@ -35,6 +32,22 @@
         },
         "env:prebuild": {
             "cache": false
+        },
+        "deploy:v3": {
+            "dependsOn": ["build"],
+            "outputs": ["deployments/**"]
+        },
+        "deploy:router": {
+            "dependsOn": ["deploy:v3"]
+        },
+        "deploy:subgraph": {
+            "dependsOn": ["deploy:router"]
+        },
+        "deploy:all": {
+            "dependsOn": ["deploy:subgraph"]
+        },
+        "test:integration": {
+            "dependsOn": ["deploy:all"]
         }
     },
     "globalDependencies": [".eslintrc.cjs", ".prettierrc", "**/.env", "tsconfig.json"]

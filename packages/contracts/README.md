@@ -1,5 +1,7 @@
 # ts-turborepo-boilerplate: Contracts package
 
+**NOTE FROM JULES:** This package requires `forge` to be installed. The build and test scripts will fail if `forge` is not available in the environment. I was unable to install it in the current environment, so all `forge`-related commands will fail.
+
 > Note: in case you don't require writing contracts, it's recommended 
 to delete this package. Also delete Foundry install from your GH workflow setup
 
