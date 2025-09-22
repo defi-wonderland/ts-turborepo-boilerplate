@@ -24,19 +24,25 @@
         "lint": "turbo run lint",
         "lint:fix": "turbo run lint:fix",
         "prepare": "husky && chmod +x ./create-package.sh",
+        "secretlint": "secretlint **/*.*",
         "start": "turbo run start",
         "test": "turbo run test",
         "test:cov": "turbo run test:cov",
         "test:integration": "turbo run test:integration"
     },
     "lint-staged": {
-        "*": "prettier --write --ignore-unknown",
+        "*": [
+            "prettier --write --ignore-unknown",
+            "secretlint **/*.*"
+        ],
         "*.js,*.ts,*.json": "eslint --fix",
         "package.json": "sort-package-json"
     },
     "devDependencies": {
         "@commitlint/config-conventional": "19.4.1",
         "@ianvs/prettier-plugin-sort-imports": "4.3.1",
+        "@secretlint/secretlint-rule-pattern": "10.1.1",
+        "@secretlint/secretlint-rule-preset-recommend": "10.1.1",
         "@types/node": "20.3.1",
         "@typescript-eslint/eslint-plugin": "7.18.0",
         "@typescript-eslint/parser": "7.18.0",
@@ -48,6 +54,7 @@
         "husky": "9.1.5",
         "lint-staged": "15.2.10",
         "prettier": "3.3.3",
+        "secretlint": "10.1.1",
         "sort-package-json": "2.10.1",
         "turbo": "2.1.1",
         "typescript": "5.5.4",
